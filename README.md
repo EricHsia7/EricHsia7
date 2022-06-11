@@ -1,6 +1,6 @@
-## Hi there 👋 
+### Hi there 👋 
 ### This is my profile page!
-#### interest
+### interest
 * ⌨️Coding
 * 🎧Music
 * 📖Reading
