@@ -1,4 +1,4 @@
-Commits: {commits_count}
-Pull requests: {prs_count}
-Issues: {issues_count}
-Update time: {update_time}
+:hash: Commits: {commits_count}
+:arrows_clockwise: Pull requests: {prs_count}
+:information_source: Issues: {issues_count}
+:clock3: Update time: {update_time}
