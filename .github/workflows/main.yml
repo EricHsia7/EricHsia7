@@ -42,11 +42,11 @@ jobs:
     - name: list file
       run: ls
     
-    - name: Read package.json
+    - name: Read commits.json
       id: package
       uses: juliangruber/read-file-action@v1
       with:
         path: ./commits.json
 
-    - name: Echo package.json
-      run: echo "${{ steps.package.outputs.content }}"
+    - name: Echo commits total count
+      run: echo "${{ JSON.parse(steps.package.outputs.content).total_count }}"
