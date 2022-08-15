@@ -23,3 +23,15 @@ jobs:
       with:
         endpoint: https://example.com
         configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.API_TOKEN }}"} }'
+
+    - name: Checkout code
+        uses: actions/checkout@v3
+
+    - name: read json
+        id: read_file
+        uses: andstor/file-reader-action@v1
+        with:
+          path: "fetch-api-data-action/data.json"
+
+      - name: File contents
+        run: echo "${ steps.read_file.outputs.contents }"
