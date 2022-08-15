@@ -16,22 +16,9 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  update-gist:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/github-script@v6
-        with:
-          script: |
-            fetch('https://api.github.com/search/commits?q=author:EricHsia7')
-            .then(function(response) {
-              return response.json();
-            })
-            .then(function(res) {
-              console.log(res);
-              console.log('commit total count:' + res.total_count)
-            });
+      - uses: actions/checkout@v3
+      - name: Update readme.md
+        uses: EricHsia7/github-stats-box@main
