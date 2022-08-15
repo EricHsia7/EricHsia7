@@ -21,21 +21,33 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Fetch API
+    - name: Fetch commits
       uses: gautemo/fetch-api-data-action@1.0.2
       with:
-        url: 'https://fake-movie-database-api.herokuapp.com/api?s=batman'
-        file: 'data.json'
+        url: 'https://api.github.com/search/commits?q=author:EricHsia7'
+        file: 'commits.json'
+
+    - name: Fetch Pulls
+      uses: gautemo/fetch-api-data-action@1.0.2
+      with:
+        url: 'https://api.github.com/search/issues?q=author:EricHsia7+type:pr'
+        file: 'prs.json'
+
+    - name: Fetch Issue
+      uses: gautemo/fetch-api-data-action@1.0.2
+      with:
+        url: 'https://api.github.com/search/issues?q=author:EricHsia7+type:issue'
+        file: 'issue.json'
 
     - name: list file
       run: ls
     
-    - name: get commits total count
-      id: commitsdata
+    - name: Get commits
+      id: commits_data
       uses: notiz-dev/github-action-json-property@release
       with: 
-        path: 'data.json'
+        path: 'commits.json'
         prop_path: 'total_count'
 
-    - run: echo ${{steps.commitsdata.outputs.prop}} 
+    - run: echo ${{steps.commits_data.outputs.prop}} 
 
