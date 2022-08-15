@@ -22,7 +22,7 @@ jobs:
       uses: gautemo/fetch-api-data-action@1.0.2
       with:
         url: 'https://fake-movie-database-api.herokuapp.com/api?s=batman'
-        file: 'backup/data.json'
+        file: 'fetch-data/data.json'
 
     - name: Checkout code
       uses: actions/checkout@v3
@@ -31,7 +31,7 @@ jobs:
       id: read_file
       uses: andstor/file-reader-action@v1
       with:
-        path: "fetch-api-data-action/data.json"
+        path: "fetch-data/data.json"
 
     - name: File contents
       run: echo "${ steps.read_file.outputs.contents }"
