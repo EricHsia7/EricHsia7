@@ -1,7 +1,7 @@
 ### Hi there 👋
 ### Stats
 * Commits:{commits_count}
-* PRs:{prs_count}
+* Pull requests:{prs_count}
 * Issues:{issues_count}
 ### interests
 ⌨️Coding
