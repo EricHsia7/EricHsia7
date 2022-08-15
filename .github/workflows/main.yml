@@ -42,7 +42,7 @@ jobs:
     - name: list file
       run: ls
     - name: save file
-    uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
         name: file
         path: commits.json
