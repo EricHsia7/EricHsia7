@@ -1,16 +1,25 @@
 name: Update Readme.md
 
  # Controls when the workflow will run
- on:
+on:
    # Triggers the workflow on push or pull request events but only for the "master" branch
-   push:
-     branches: [ "master" ]
-   schedule:
+  push:
+    branches: [ "master" ]
+  schedule:
      # * is a special character in YAML so you have to quote this string
-     - cron:  '30 0 1,10,20,30 * *'
+    - cron:  '30 0 1,10,20,30 * *'
 
    # Allows you to run this workflow manually from the Actions tab
-   workflow_dispatch:
+  workflow_dispatch:
 
  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
- jobs:
+jobs:
+  job1:
+    name: Update
+    runs-on: ubuntu-latest
+    steps:
+    - name: Fetch API Data
+      uses: JamesIves/fetch-api-data-action@v2
+        with:
+          endpoint: https://example.com
+          configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.API_TOKEN }}"} }'
