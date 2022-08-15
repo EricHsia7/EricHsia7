@@ -42,11 +42,10 @@ jobs:
     - name: list file
       run: ls
     
-    - name: Read commits.json
-      id: package
-      uses: juliangruber/read-file-action@v1
+    - name: JSON to variables
+      uses: antifree/json-to-variables@v1.0.1
       with:
-        path: ./commits.json
-
-    - name: Echo commits total count
-      run: echo "${{ steps.package.outputs.content.total_count }}"
+        filename: 'commits.json'
+        prefix: commits
+    - name: Show output
+      run: echo "Count ${{env.commits_total_count}}"
