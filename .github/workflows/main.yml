@@ -30,12 +30,12 @@ jobs:
     - name: list file
       run: ls
     
-    - name: get version
-      id: commits_data
+    - name: get commits total count
+      id: commitsdata
       uses: notiz-dev/github-action-json-property@release
       with: 
         path: 'data.json'
         prop_path: 'total_count'
 
-    - run: echo ${{steps.commits_data.outputs.prop}} 
+    - run: echo ${{steps.commitsdata.outputs.prop}} 
 
