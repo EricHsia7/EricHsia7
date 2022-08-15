@@ -1,6 +1,10 @@
 ### Hi there 👋
 ### Stats
-[![Stats](https://github-readme-stats.vercel.app/api?username=EricHsia7&show_icons=true&hide=contribs&border_radius=8)](https://github.com/EricHsia7/)
+Commits:6717
+
+Pull requests:75
+
+Issues:1
 ### interests
 ⌨️Coding
 
@@ -9,3 +13,7 @@
 📖Reading
 
 📝Write fiction
+
+
+#### .
+update at:2022-08-16 02:52:48
