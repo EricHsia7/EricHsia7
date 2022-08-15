@@ -28,3 +28,5 @@ jobs:
         with:
           script: |
             console.log('test')
+            var json = {'abc':'123'}
+            console.log(json.abc)
