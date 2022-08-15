@@ -23,6 +23,8 @@ jobs:
       with:
         endpoint: https://example.com
         configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.API_TOKEN }}"} }'
+        save-location: fetch-api-data-action
+        save-name: data
 
     - name: Checkout code
       uses: actions/checkout@v3
