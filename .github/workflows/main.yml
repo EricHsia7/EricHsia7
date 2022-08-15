@@ -49,4 +49,4 @@ jobs:
         path: ./commits.json
 
     - name: Echo commits total count
-      run: echo "${{ JSON.parse(steps.package.outputs.content).total_count }}"
+      run: echo "${{ steps.package.outputs.content.total_count }}"
