@@ -43,11 +43,17 @@ jobs:
       run: ls
     
     - name: Get commits
-      id: commits_data
-      uses: notiz-dev/github-action-json-property@release
-      with: 
-        path: 'commits.json'
-        prop_path: 'total_count'
+      id: set_var
+      run: |
+        content=`cat ./commits.json`
+        # the following lines are only required for multi line json
+        content="${content//'%'/'%25'}"
+        content="${content//$'\n'/'%0A'}"
+        content="${content//$'\r'/'%0D'}"
+        # end of optional handling for multi line json
+        echo "::set-output name=commitsjson::$content"
 
-    - run: echo ${{steps.commits_data.outputs.prop}} 
+    - run: |
+         echo "${{fromJson(steps.set_var.outputs.commitsjson).total_count}}"
+
 
