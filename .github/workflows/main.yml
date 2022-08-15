@@ -54,6 +54,6 @@ jobs:
         echo "::set-output name=commitsjson::$content"
 
     - run: |
-         echo "${{fromJson(steps.set_var.outputs.commitsjson).total_count}}"
+        echo "${{fromJson(steps.set_var.outputs.commitsjson).total_count}}"
 
 
