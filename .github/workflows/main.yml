@@ -22,7 +22,7 @@ jobs:
       uses: gautemo/fetch-api-data-action@1.0.2
       with:
         url: 'https://fake-movie-database-api.herokuapp.com/api?s=batman'
-        file: 'fetch-data/data.json'
+        file: 'data.json'
 
     - name: Checkout code
       uses: actions/checkout@v3
