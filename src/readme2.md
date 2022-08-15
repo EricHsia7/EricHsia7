@@ -3,7 +3,7 @@
 #### Commits: {commits_count}
 #### Pull requests: {prs_count}
 #### Issues: {issues_count}
-### interests
+### Interests
 ⌨️Coding
 
 🎧Music
@@ -13,5 +13,5 @@
 📝Write fiction
 
 
-#### update time
+#### Update time
 * {update_time}
