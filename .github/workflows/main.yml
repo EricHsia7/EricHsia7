@@ -41,12 +41,8 @@ jobs:
 
     - name: list file
       run: ls
-
-    - name: JSON to variables
-      uses: antifree/json-to-variables@v1.0.1
+    - name: save file
+    uses: actions/upload-artifact@v3
       with:
-        filename: 'commits.json'
-        prefix: commits
-
-    - name: Show output
-      run: echo "Count ${{ env.commits_total_count }}"
+        name: file
+        path: commits.json
