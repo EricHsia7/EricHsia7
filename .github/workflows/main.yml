@@ -42,17 +42,11 @@ jobs:
     - name: list file
       run: ls
     
-    - name: Get commits
-      id: set_var
-      run: |
-        content=`./commits.json`
-        # the following lines are only required for multi line json
-        content="${content//'%'/'%25'}"
-        content="${content//$'\n'/'%0A'}"
-        content="${content//$'\r'/'%0D'}"
-        # end of optional handling for multi line json
-        echo "::set-output name=commitsjson::$content"
+    - name: Read package.json
+      id: package
+      uses: juliangruber/read-file-action@v1
+      with:
+        path: ./commits.json
 
-    - run: echo "${{fromJson(steps.set_var.outputs.commitsjson).total_count}}"
-
-
+    - name: Echo package.json
+      run: echo "${{ steps.package.outputs.content }}"
