@@ -30,11 +30,11 @@ jobs:
     - name: list file
       run: ls
     
-    - name: Read file contents
-      id: read_file
-      uses: andstor/file-reader-action@v1
-      with:
-        path: "data.json"
+    - name: get version
+    id: commits_data
+    uses: notiz-dev/github-action-json-property@release
+    with: 
+      path: 'data.json'
+      prop_path: 'total_count'
+    - run: echo ${{steps.commits_data.outputs.prop}} 
 
-    - name: File contents
-      run: echo "${ steps.read_file.outputs.contents }"
