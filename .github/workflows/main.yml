@@ -18,13 +18,11 @@ jobs:
     name: Update
     runs-on: ubuntu-latest
     steps:
-    - name: Fetch API Data
-      uses: JamesIves/fetch-api-data-action@v2
+    - name: Fetch API
+      uses: gautemo/fetch-api-data-action@1.0.2
       with:
-        endpoint: https://example.com
-        configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.API_TOKEN }}"} }'
-        save-location: fetch-api-data-action
-        save-name: data
+        url: 'https://fake-movie-database-api.herokuapp.com/api?s=batman'
+        file: 'backup/data.json'
 
     - name: Checkout code
       uses: actions/checkout@v3
