@@ -53,7 +53,6 @@ jobs:
         # end of optional handling for multi line json
         echo "::set-output name=commitsjson::$content"
 
-    - run: |
-        echo "${{fromJson(steps.set_var.outputs.commitsjson).total_count}}"
+    - run: echo "${{fromJson(steps.set_var.outputs.commitsjson).total_count}}"
 
 
