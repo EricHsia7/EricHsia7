@@ -1,14 +1,20 @@
 ### About me
-```
 In an endless gallery,
+
 I have a number of tapestry,
+
 Reflecting the truth of reality.
+
 When you take in the image,
+
 You will find the misery,
+
 And I will found a journey,
+
 Discovering the beauty,
+
 Coming out the dictionary.
-```
+
 ### Pinned Repositories
 <a href="https://github.com/EricHsia7/pwdgen2">
 <picture>
