@@ -1,19 +1,11 @@
-### About me
-In an endless gallery,
+### Activities
 
-I have a number of tapestry,
-
-Reflecting the truth of reality.
-
-When you take in the image,
-
-You will find the misery,
-
-And I will found a journey,
-
-Discovering the beauty,
-
-Coming out the dictionary.
+<picture>
+            <source media="(min-width: 801px)" srcset="https://erichsia7.github.io/gh-statistics/images/contribution_graph@15x.png">
+            <source media="(min-width: 541px) and (max-width: 800px)" srcset="https://erichsia7.github.io/gh-statistics/images/contribution_graph@12x.png">
+            <source media="(min-width: 342px) and (max-width: 540px)" srcset="https://erichsia7.github.io/gh-statistics/images/contribution_graph@6x.png">
+            <img src="https://erichsia7.github.io/gh-statistics/images/contribution_graph@3x.png" alt="contribution graph" width="100%">
+          </picture>
 
 ### Pinned Repositories
 <a href="https://github.com/EricHsia7/pwdgen2">
