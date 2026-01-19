@@ -7,7 +7,7 @@
 <img src="https://erichsia7.github.io/gh-statistics/images/contribution_graph@3x.png" alt="contribution graph" width="100%">
 </picture>
 
-### Most Used Languages
+### Languages
 
 <picture>
 <source media="(min-width: 801px) and (prefers-color-scheme: light)" srcset="https://erichsia7.github.io/gh-statistics/images/language_statistics:light@15x.png">
